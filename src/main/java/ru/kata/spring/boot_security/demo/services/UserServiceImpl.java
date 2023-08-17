@@ -47,7 +47,6 @@ public class UserServiceImpl implements UserService{
         userRepository.deleteById(id);
     }
 
-    @Transactional
     @Override
     public User findByUsername(String name) {
         return userRepository.findByUsername(name);
@@ -61,6 +60,4 @@ public class UserServiceImpl implements UserService{
         }
         return user;
     }
-
-
 }
